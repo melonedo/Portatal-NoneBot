@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "portatal-nonebot"
+version = "0.1.0"
+description = ""
+authors = ["melonedo <44501064+melonedo@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+nonebot-adapter-onebot = "^2.4.5"
+nonebot2 = {extras = ["fastapi"], version = "^2.3.3"}
+aiohttp = "^3.10.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
+]
+plugins = ["elec"]
+plugin_dirs = []
+builtin_plugins = ["echo"]
